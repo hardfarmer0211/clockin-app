@@ -14,8 +14,8 @@ app.use(express.json()); // Cho phép nhận dữ liệu JSON từ client
 
 // Kết nối MongoDB
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("✅ Đã kết nối MongoDB"))
-  .catch(err => console.log("❌ Lỗi khi kết nối MongoDB:", err));
+  .then(() => console.log("✅ connected MongoDB"))
+  .catch(err => console.log("❌ error when MongoDB:", err));
 
 // Routes
 app.use('/api/auth', authRoute);  // Đăng ký & Đăng nhập
